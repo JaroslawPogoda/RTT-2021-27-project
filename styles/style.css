@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap");
 
 * {
   margin: 0;
@@ -107,9 +107,10 @@ main .top-section .first-half {
 }
 
 main .top-section .first-half h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   line-height: 1.5rem;
   font-size: 1.7rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -212,12 +213,12 @@ main .top-section .second-half img {
   }
 
   main .top-section .first-half h2 {
-      font-size: 2rem;
-      line-height: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
   }
 
   main .top-section .first-half p {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
   /* Main Section End */
 }
