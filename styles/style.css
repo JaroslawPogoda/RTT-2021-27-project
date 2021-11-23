@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
 
 * {
   margin: 0;
@@ -14,6 +15,7 @@ body {
 /* Mobile-first styling START */
 nav {
   position: fixed;
+  z-index: 99999999999;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -46,7 +48,7 @@ nav h1 {
 }
 
 .mobile-overlay {
-  /* height: 0; */
+  height: 0;
   width: 100%;
   position: fixed;
   z-index: 999999999999999;
@@ -67,9 +69,9 @@ nav h1 {
 }
 
 .mobile-overlay .overlay-content {
-  /* position: relative;
-  top: 15%; */
-  margin-top: 7rem;
+  position: relative;
+  top: 15%;
+  /* margin-top: 7rem; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -84,14 +86,69 @@ nav h1 {
   font-size: 2rem;
 }
 
-.mobile-overlay .overlay-content a:focus {
-    padding: .5rem 1rem;
-    border: 3px solid yellow;
+main .top-section {
+  display: grid;
+  grid: 1fr / 1fr;
+  grid-template-areas:
+    "first"
+    "second";
 }
+
+main .top-section .first-half {
+  height: 50vh;
+  width: 100vw;
+  background: #ff3b29;
+  grid-area: first;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+main .top-section .first-half h2 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.5rem;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+main .top-section .first-half p {
+  font-size: 1.1rem;
+  padding: 0 2rem;
+}
+
+main .top-section .first-half .inner-container {
+  text-align: center;
+  margin: 0 2rem;
+}
+
+main .top-section .second-half {
+  height: 50vh;
+  width: 100vw;
+  grid-area: second;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .top-section .second-half img {
+  height: 80%;
+  width: 80%;
+}
+
 /* Mobile-first styling END */
 
 /* Desktop Sizing START */
 @media (min-width: 950px) {
+  /* Navigation START */
+
+  nav h1 {
+    font-size: 3.2rem;
+  }
+
   .fa-bars {
     display: none;
   }
@@ -118,9 +175,50 @@ nav h1 {
   nav ul li a:hover {
     border-bottom: 4px solid white;
   }
+  /* Navigation END */
 
-  nav ul li a:focus {
-      border: 4px solid yellow;
+  /* Main Section Start */
+  main .top-section {
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    grid-template-areas: "first second";
   }
+
+  main .top-section .first-half {
+    height: 100vh;
+    width: 55vw;
+    background: #ff3b29;
+    grid-area: "second";
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  main .top-section .first-half .inner-container {
+    text-align: center;
+    margin: 0 2rem;
+  }
+
+  main .top-section .second-half {
+    height: 100vh;
+    width: 45vw;
+    background: white;
+    grid-area: "first";
+    position: relative;
+  }
+
+  main .top-section .second-half img {
+    width: 90%;
+    height: 90%;
+  }
+
+  main .top-section .first-half h2 {
+      font-size: 2rem;
+      line-height: 2rem;
+  }
+
+  main .top-section .first-half p {
+      font-size: 1.3rem;
+  }
+  /* Main Section End */
 }
 /* Desktop Sizing END */
