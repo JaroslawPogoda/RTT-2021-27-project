@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navigation Start -->
+    <nav class='nav-bar'>
+        <h1>Per Scholas 27</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Ideas</a></li>
+            <li><a href="flexbox.html">Flex-box</a></li>
+            <li><a href="#">Grid</a></li>
+            <li><a href="#">Github Profiles</a></li>
+            <li><a href="#">Codepen Profiles</a></li>
+        </ul>
+        <!-- Hamburger Menu Icon -->
+        <i class="fas fa-bars" onclick="openNav()"></i>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id='mobile-nav' class="mobile-overlay">
+        <a href="#" class='close-btn' onclick='closeNav()'><i class="fas fa-times"></i></a>
+        <div class="overlay-content">
+            <a href="../index.html">Home</a>
+            <a href="#" onclick='closeNav()'>Ideas</a>
+            <a href="#" onclick='closeNav()'>Flex-box</a>
+            <a href="#" onclick='closeNav()'>Grid</a>
+            <a href="#" onclick='closeNav()'>Github Profiles</a>
+            <a href="#" onclick='closeNav()'>Codepen Profiles</a>
+        </div>
+    </div>
+    <!-- Navigation End -->
+
+    <!-- <div class="codepen-container">
+        <p class="codepen" data-height="412" data-theme-id="dark" data-default-tab="html,result"
+            data-slug-hash="gOxJNWO" data-user="nycrick"
+            style="height: 412px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/nycrick/pen/gOxJNWO">
+                    Untitled</a> by ricardo (<a href="https://codepen.io/nycrick">@nycrick</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    </div> -->
+
+    <script src='../script.js'></script>
+</body>
+
+</html>
