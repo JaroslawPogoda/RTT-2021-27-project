@@ -6,48 +6,107 @@
   font-family: "Roboto Condensed", sans-serif;
 }
 
+body {
+  height: 200vh;
+}
+
 nav {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #ff3b29;
+  color: white;
+  height: 90px;
+  width: 100%;
+  transition: box-shadow 500ms ease-in-out;
+}
+
+.scrolling-active {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-  height: 80px;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav ul li {
-  list-style: none;
-  margin-right: 2rem;
-  font-size: 1.1rem;
 }
 
 nav h1 {
-  color: white;
   margin-left: 1rem;
   font-family: "Bebas Neue", cursive;
   font-size: 2.8rem;
 }
 
-nav ul li a {
-  text-decoration: none;
+.nav-bar ul {
+  display: none;
+}
+
+.fa-bars {
+  margin-right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobile-overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 999999999999999999;
+  top: 0;
+  left: 0;
+  background-color: #ff3b29;
+  overflow: hidden;
+  transition: 450ms;
+}
+
+.mobile-overlay .close-btn {
   color: white;
-  /* border: 1px solid black; */
-  transition: border-bottom 200ms ease;
-  padding: 1.7rem 0;
-  height: 77px;
-  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  font-size: 3rem;
+  position: absolute;
+  right: 28px;
+  top: 17px;
 }
 
-nav ul li a:hover {
-  border-bottom: 3px solid white;
+.mobile-overlay .overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.mobile-overlay .overlay-content a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
 
-.codepen {
-    margin: 0 3rem;
-    border: 3px solid red;
+/* Desktop Size */
+@media (min-width: 950px) {
+  .fa-bars {
+    display: none;
+  }
+
+  .nav-bar ul {
+    display: flex;
+  }
+
+  nav ul li {
+    list-style: none;
+    margin-right: 2rem;
+    font-size: 1.1rem;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: border-bottom 200ms ease;
+    padding: 2rem 0;
+    height: 77px;
+    border-bottom: 3px solid transparent;
+  }
+
+  nav ul li a:hover {
+    border-bottom: 3px solid white;
+  }
 }
