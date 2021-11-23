@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  outline: none;
+}
+
+body {
+  height: 150vh;
+}
+
+/* Mobile-first styling START */
+nav {
+  position: fixed;
+  z-index: 99999999999;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff3b29;
+  color: white;
+  height: 90px;
+  width: 100%;
+  transition: box-shadow 500ms ease-in-out;
+}
+
+.scrolling-active {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav h1 {
+  margin-left: 1rem;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+}
+
+.nav-bar ul {
+  display: none;
+}
+
+.fa-bars {
+  margin-right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobile-overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 999999999999999;
+  top: 0;
+  left: 0;
+  background-color: #ff3b29;
+  overflow: hidden;
+  transition: 600ms;
+}
+
+.mobile-overlay .close-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  position: absolute;
+  right: 28px;
+  top: 17px;
+}
+
+.mobile-overlay .overlay-content {
+  position: relative;
+  top: 15%;
+  /* margin-top: 7rem; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-overlay .overlay-content a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+main .top-section {
+  display: grid;
+  grid: 1fr / 1fr;
+  grid-template-areas:
+    "first"
+    "second";
+}
+
+main .top-section .first-half {
+  height: 50vh;
+  width: 100vw;
+  background: #ff3b29;
+  grid-area: first;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+main .top-section .first-half h2 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.5rem;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+main .top-section .first-half p {
+  font-size: 1.1rem;
+  padding: 0 2rem;
+}
+
+main .top-section .first-half .inner-container {
+  text-align: center;
+  margin: 0 2rem;
+}
+
+main .top-section .second-half {
+  height: 50vh;
+  width: 100vw;
+  grid-area: second;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .top-section .second-half img {
+  height: 80%;
+  width: 80%;
+}
+
+/* Mobile-first styling END */
+
+/* Desktop Sizing START */
+@media (min-width: 950px) {
+  /* Navigation START */
+
+  nav h1 {
+    font-size: 3.2rem;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .nav-bar ul {
+    display: flex;
+  }
+
+  nav ul li {
+    list-style: none;
+    margin-right: 2rem;
+    font-size: 1.1rem;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: border-bottom 200ms ease;
+    padding: 1.94rem 0;
+    height: 77px;
+    border-bottom: 4px solid transparent;
+  }
+
+  nav ul li a:hover {
+    border-bottom: 4px solid white;
+  }
+  /* Navigation END */
+
+  /* Main Section Start */
+  main .top-section {
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    grid-template-areas: "first second";
+  }
+
+  main .top-section .first-half {
+    height: 100vh;
+    width: 55vw;
+    background: #ff3b29;
+    grid-area: "second";
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  main .top-section .first-half .inner-container {
+    text-align: center;
+    margin: 0 2rem;
+  }
+
+  main .top-section .second-half {
+    height: 100vh;
+    width: 45vw;
+    background: white;
+    grid-area: "first";
+    position: relative;
+  }
+
+  main .top-section .second-half img {
+    width: 90%;
+    height: 90%;
+  }
+
+  main .top-section .first-half h2 {
+      font-size: 2rem;
+      line-height: 2rem;
+  }
+
+  main .top-section .first-half p {
+      font-size: 1.3rem;
+  }
+  /* Main Section End */
+}
+/* Desktop Sizing END */
