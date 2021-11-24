@@ -13,3 +13,22 @@ function openNav() {
 function closeNav() {
   document.getElementById("mobile-nav").style.height = "0%";
 }
+
+// menu bars
+const menuBtn = document.querySelector(".btn");
+let menuOpen = false;
+menuBtn.addEventListener("click", () => {
+  // IGNORE LINE 22-24
+  // menuBtn.classList.toggle("open");
+  // openNav();
+  // let menuOpen = false;
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
+    openNav();
+    menuOpen = true;
+  } else {
+    menuOpen = false;
+    menuBtn.classList.remove("open");
+    closeNav();
+  }
+});
