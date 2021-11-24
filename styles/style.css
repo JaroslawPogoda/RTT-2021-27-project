@@ -22,7 +22,7 @@ nav {
   align-items: center;
   background: #ff3b29;
   color: white;
-  height: 80px;
+  height: 70px;
   width: 100%;
   transition: box-shadow 500ms ease-in-out;
 }
@@ -139,7 +139,7 @@ main .top-section .second-half img {
   margin-right: 2rem;
   position: fixed;
   right: 0;
-  top: 20px;
+  top: 15px;
   z-index: 99999;
 }
 
