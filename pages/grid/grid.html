@@ -4,15 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <!-- Linking up css files -->
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+=======
     <link rel="stylesheet" href="../../styles/style.css">
+>>>>>>> d787eadfe7dad4e74d5e20bcf304b2591675eba5
     <link rel="stylesheet" href="../../styles/grid-style.css">
     <title>Grid Tutorial by RTT-27</title>
 </head>
 <body id="main-page">
-    <h1>Tutorial for Grid</h1>
-    <h3>this page was created using grid</h3>
-    <div class="intro">
-        <div></div>
+    <!-- Navigation Start -->
+    <nav class='nav-bar'>
+        <h1>Per Scholas 27</h1>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#">Ideas</a></li>
+            <li><a href="#">Flex-box</a></li>
+            <li><a href="/pages/grid/grid.html">Grid</a></li>
+            <li><a href="#">Github Profiles</a></li>
+            <li><a href="#">Codepen Profiles</a></li>
+        </ul>
+        <!-- Hamburger Menu Icon -->
+        <i class="fas fa-bars" onclick="openNav()"></i>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id='mobile-nav' class="mobile-overlay">
+        <a href="#" class='close-btn' onclick='closeNav()'><i class="fas fa-times"></i></a>
+        <div class="overlay-content">
+            <a href="../../index.html">Home</a>
+            <a href="#" onclick='closeNav()'>Ideas</a>
+            <a href="#" onclick='closeNav()'>Flex-box</a>
+            <a href="#" onclick='closeNav()'>Grid</a>
+            <a href="#" onclick='closeNav()'>Github Profiles</a>
+            <a href="#" onclick='closeNav()'>Codepen Profiles</a>
+        </div>
     </div>
+    <!-- Navigation End -->
+    <main>
+        <div class="top-section">
+            <div class="first-half">
+                <div class="inner-container">
+                    <h2>Learning Grid</h2>
+                    <p>A beginners guide to learning Gird-layout</p>
+                </div>
+            </div>
+            <div class="second-half">
+                <img src="../images/Fitting-piece-pana.svg" alt="man placing box on top of boxes">
+            </div>
+        </div>
+    </main>
+    <script src='../../script.js'></script>
 </body>
+
 </html>
