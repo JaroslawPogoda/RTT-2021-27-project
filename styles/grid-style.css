@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
 
@@ -181,3 +182,8 @@ nav h1 {
   /* Main Section End */
 }
 /* Desktop Sizing END */
+=======
+* {
+    margin: 0;
+}
+>>>>>>> d787eadfe7dad4e74d5e20bcf304b2591675eba5
