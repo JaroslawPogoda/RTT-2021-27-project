@@ -47,12 +47,6 @@ nav h1 a {
   display: none;
 }
 
-/* .fa-bars {
-  margin-right: 2rem;
-  font-size: 2rem;
-  cursor: pointer;
-} */
-
 .mobile-overlay {
   height: 0;
   width: 100%;
@@ -67,7 +61,10 @@ nav h1 a {
 
 .mobile-overlay .overlay-content {
   position: relative;
-  top: 15%;
+  /* top: 20%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -75,11 +72,21 @@ nav h1 a {
   justify-content: center;
 }
 
+.mobile-overlay img {
+  position: absolute;
+  opacity: 0.1;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
 .mobile-overlay .overlay-content a {
   color: white;
   text-decoration: none;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 main .top-section {
@@ -204,11 +211,10 @@ main .top-section .second-half img {
 }
 /* Mobile View Bars END */
 
-
 /* Mobile-first styling END */
 
 /* Desktop Sizing START */
-@media (min-width: 950px) {
+@media (min-width: 800px) {
   /* Navigation START */
   nav h1 a {
     font-size: 3.2rem;
@@ -236,6 +242,46 @@ main .top-section .second-half img {
 
   nav ul li a:hover {
     border-bottom: 4px solid white;
+  }
+
+  .mobile-overlay .overlay-content {
+    top: 40%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .mobile-overlay img {
+    opacity: 0.3;
+    max-width: 900px;
+  }
+
+  .mobile-overlay .overlay-content a {
+    margin: 0 0 0.5rem 3rem;
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    overflow: scroll;
+    position: relative;
+    transition: color 300ms ease-in-out;
+  }
+
+  .mobile-overlay .overlay-content a::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    position: absolute;
+    bottom: 0px;
+    transform: translateX(385px);
+    transition: transform 500ms ease-in-out, background 500ms ease-in-out;
+  }
+
+  .mobile-overlay .overlay-content a:hover {
+    color: black;
+  }
+
+  .mobile-overlay .overlay-content a:hover::before {
+    transform: translateX(0);
+    background: black;
   }
   /* Navigation END */
 
@@ -281,7 +327,6 @@ main .top-section .second-half img {
   main .top-section .first-half p {
     font-size: 1.3rem;
   }
-
 
   /* Main Section End */
 }
