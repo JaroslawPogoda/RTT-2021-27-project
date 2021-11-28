@@ -165,7 +165,7 @@ main .top-section .second-half img {
 .menu-bars {
   width: 35px;
   height: 5px;
-  transition: transform 400ms ease-in-out, background 400ms ease-in-out;
+  /* transition: transform 400ms ease-in-out, background 400ms ease-in-out; */
 }
 
 .btn.open .menu-bars {
@@ -187,7 +187,7 @@ main .top-section .second-half img {
   right: 0;
   width: 22px;
   transform: translateY(-12px);
-  transition: width 400ms ease-in-out, transform 400ms ease-in-out;
+  /* transition: width 400ms ease-in-out, transform 400ms ease-in-out; */
   opacity: 1;
 }
 
@@ -202,7 +202,7 @@ main .top-section .second-half img {
 
 .menu-bars::after {
   transform: translateY(12px);
-  transition: transform 400ms ease-in-out;
+  /* transition: transform 400ms ease-in-out; */
 }
 
 .btn.open .menu-bars::after {
@@ -245,9 +245,9 @@ main .top-section .second-half img {
   }
 
   .mobile-overlay .overlay-content {
+    /* border: 5px solid blue; */
     top: 40%;
     align-items: flex-start;
-    justify-content: flex-start;
   }
 
   .mobile-overlay img {
@@ -261,7 +261,7 @@ main .top-section .second-half img {
     font-size: 3rem;
     overflow: scroll;
     position: relative;
-    transition: color 300ms ease-in-out;
+    transition: color 400ms ease-in-out;
   }
 
   .mobile-overlay .overlay-content a::before {
@@ -272,7 +272,7 @@ main .top-section .second-half img {
     position: absolute;
     bottom: 0px;
     transform: translateX(385px);
-    transition: transform 500ms ease-in-out, background 500ms ease-in-out;
+    transition: transform 300ms ease-in-out, background 300ms ease-in-out;
   }
 
   .mobile-overlay .overlay-content a:hover {
@@ -282,6 +282,18 @@ main .top-section .second-half img {
   .mobile-overlay .overlay-content a:hover::before {
     transform: translateX(0);
     background: black;
+  }
+
+  .menu-bars {
+    transition: transform 400ms ease-in-out, background 400ms ease-in-out;
+  }
+
+  .menu-bars::before {
+    transition: width 400ms ease-in-out, transform 400ms ease-in-out;
+  }
+
+  .menu-bars::after {
+    transition: transform 400ms ease-in-out;
   }
   /* Navigation END */
 
