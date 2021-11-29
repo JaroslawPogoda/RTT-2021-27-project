@@ -55,7 +55,7 @@ nav h1 a {
   top: 0;
   left: 0;
   background-color: var(--main-red);
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 600ms;
 }
 
