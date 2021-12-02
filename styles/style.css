@@ -13,7 +13,8 @@ html {
 }
 
 body {
-  height: 200vh;
+  height: 150vh;
+  overflow-x: hidden;
 }
 
 /* Mobile-first styling START */
@@ -256,18 +257,18 @@ main .top-section .second-half img {
   }
 
   .mobile-overlay .overlay-content a {
-    margin: 0 0 0.5rem 3rem;
+    margin: 0 0 0.5rem 5rem;
     font-family: "Playfair Display", serif;
     font-size: 3rem;
-    overflow: scroll;
     position: relative;
     transition: color 400ms ease-in-out;
+    overflow: hidden;
   }
 
   .mobile-overlay .overlay-content a::before {
     content: "";
     width: 100%;
-    height: 3px;
+    height: 4px;
     background: transparent;
     position: absolute;
     bottom: 0px;
